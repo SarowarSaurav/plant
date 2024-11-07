@@ -14,7 +14,7 @@ export async function POST(req: Request) {
 
     // Initialize a text-generation stream using the Hugging Face Inference SDK
     const response = await Hf.textGenerationStream({
-        model: "surgeonwz/plant-village",
+        model: "linkanjarad/mobilenet_v2_1.0_224-plant-disease-identification",
         inputs: experimental_buildOpenAssistantPrompt(messages),
         parameters: {
             max_new_tokens: 200,
