@@ -67,7 +67,7 @@ export function ResultCard({ img }: ResultProps) {
     };
 
 
-    const { data, error } = useSWR(shouldFetch ? "https://api-inference.huggingface.co/models/surgeonwz/plant-village" : null, fetcher, {
+    const { data, error } = useSWR(shouldFetch ? "https://api-inference.huggingface.co/models/linkanjarad/mobilenet_v2_1.0_224-plant-disease-identification" : null, fetcher, {
         shouldRetryOnError: true,
         onErrorRetry: (error, key, config, revalidate, { retryCount }) => {
             //if (error.status === 404) return
